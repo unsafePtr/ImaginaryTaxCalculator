@@ -35,7 +35,13 @@ namespace ImaginaryTaxCalculator
             });
 
             services.AddScoped<ITaxCalculationRules, ImaginaryTaxCalculationsRules>();
-            services.AddScoped<ITaxCalculator, TaxCalculator>();
+            services.AddScoped<TaxCalculator>();
+            services.AddScoped<ITaxCalculator>(c =>
+            {
+                var taxCalculator = c.GetRequiredService<TaxCalculator>();
+
+                return new TaxCalculatorCacheDecorator(taxCalculator);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
