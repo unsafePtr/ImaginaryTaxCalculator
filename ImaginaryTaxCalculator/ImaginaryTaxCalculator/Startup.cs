@@ -1,3 +1,4 @@
+using ImaginaryTaxCalculator.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,9 @@ namespace ImaginaryTaxCalculator
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ImaginaryTaxCalculator", Version = "v1" });
             });
+
+            services.AddScoped<ITaxCalculationRules, ImaginaryTaxCalculationsRules>();
+            services.AddScoped<ITaxCalculator, TaxCalculator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

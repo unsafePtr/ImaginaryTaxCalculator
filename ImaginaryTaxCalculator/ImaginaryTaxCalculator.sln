@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImaginaryTaxCalculator", "ImaginaryTaxCalculator\ImaginaryTaxCalculator.csproj", "{7E5B4727-BFA0-45DB-BDB4-1652AEA26DC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImaginaryTaxCalculator.Service", "ImaginaryTaxCalculator.Service\ImaginaryTaxCalculator.Service.csproj", "{3A7548AA-4FA4-41FC-B689-1E7A783AB14E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImaginaryTaxCalculator.Tests", "ImaginaryTaxCalculator.Tests\ImaginaryTaxCalculator.Tests.csproj", "{0D590434-89A3-4D93-9D9F-B5E0B713FD24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7E5B4727-BFA0-45DB-BDB4-1652AEA26DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E5B4727-BFA0-45DB-BDB4-1652AEA26DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E5B4727-BFA0-45DB-BDB4-1652AEA26DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7548AA-4FA4-41FC-B689-1E7A783AB14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7548AA-4FA4-41FC-B689-1E7A783AB14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7548AA-4FA4-41FC-B689-1E7A783AB14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7548AA-4FA4-41FC-B689-1E7A783AB14E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D590434-89A3-4D93-9D9F-B5E0B713FD24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D590434-89A3-4D93-9D9F-B5E0B713FD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D590434-89A3-4D93-9D9F-B5E0B713FD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D590434-89A3-4D93-9D9F-B5E0B713FD24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
