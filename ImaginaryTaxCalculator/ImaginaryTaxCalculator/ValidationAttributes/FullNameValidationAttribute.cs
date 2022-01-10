@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
 namespace ImaginaryTaxCalculator.ValidationAttributes
 {
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
     public class FullNameAttribute : ValidationAttribute
     {
         private static Regex _fullnameRegex = new Regex(@"(?=^.{0,40}$)^[a-zA-Z-]+\s[a-zA-Z-]+$", RegexOptions.Compiled);

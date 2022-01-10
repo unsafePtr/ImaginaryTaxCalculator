@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ImaginaryTaxCalculator.ValidationAttributes
 {
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter, AllowMultiple = false)]
     public class SsnValidationAttribute : ValidationAttribute
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
