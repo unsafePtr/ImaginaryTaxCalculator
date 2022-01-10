@@ -1,4 +1,6 @@
-﻿using ImaginaryTaxCalculator.Service;
+﻿using ImaginaryTaxCalculator.Filters;
+using ImaginaryTaxCalculator.Models;
+using ImaginaryTaxCalculator.Service;
 using ImaginaryTaxCalculator.Service.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -23,9 +25,18 @@ namespace ImaginaryTaxCalculator.Controllers
 
         [HttpPost]
         [Route("calculate")]
+        [ServiceFilter(typeof(ValidateModelAttribute))]
         public ActionResult Get(
-            [FromBody] TaxPayer taxPayer)
+            [FromBody] TaxPayerRequest taxPayerRequest)
         {
+            var taxPayer = new TaxPayer
+            {
+                CharitySpent = taxPayerRequest.CharitySpent,
+                FullName = taxPayerRequest.FullName,
+                GrossIncome = taxPayerRequest.GrossIncome,
+                SSN = taxPayerRequest.SSN
+            };
+
             var taxes = _taxCalculator.Calculate(taxPayer);
 
             return Ok(taxes);

@@ -1,3 +1,4 @@
+using ImaginaryTaxCalculator.Filters;
 using ImaginaryTaxCalculator.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +35,7 @@ namespace ImaginaryTaxCalculator
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ImaginaryTaxCalculator", Version = "v1" });
             });
 
+            services.AddScoped<ValidateModelAttribute>();
             services.AddScoped<ITaxCalculationRules, ImaginaryTaxCalculationsRules>();
             services.AddScoped<TaxCalculator>();
             services.AddScoped<ITaxCalculator>(c =>
